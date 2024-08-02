@@ -2,7 +2,7 @@
 projekt_1.py: první projekt do Engeto Online Python Akademie
 author: Mykola Tikhonov
 email: mykola.tikhonov@seznam.cz
-discord: phranschyze
+discord: mykolatikhonov
 """
 
 from task_template import TEXTS
