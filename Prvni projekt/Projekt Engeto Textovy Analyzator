@@ -1,0 +1,95 @@
+"""
+projekt_1.py: první projekt do Engeto Online Python Akademie
+author: Mykola Tikhonov
+email: mykola.tikhonov@seznam.cz
+discord: phranschyze
+"""
+
+from task_template import TEXTS
+
+username = input("Please enter your username: ")
+password = input("Please enter your password: ")
+
+#list of objects - registered users
+registered_users = {
+    'bob': "123", 
+    'ann': "pass123",
+    'mike': "password123",
+    'liz': "pass123"
+}
+
+#zacatek IF funkce + 2x rozdelovac
+if username in registered_users and password == registered_users[username]:
+    print("-" * 23, "Welcome to the app " + str(username),"We have 3 texts to be analyzed.","-" * 23, sep="\n")
+
+    #vyber analyzovaneho textu + split slov ve vybranem analyzovanem textu 
+    select_text = input("Please select text to analyze (1, 2 or 3): ")
+    selected_text_number = int(select_text)-1
+    words = TEXTS[selected_text_number].split()
+
+    #počet slov + rozdelovac
+    print("-" * 23,"Number of words in the selected text: " + str(len(words)), sep="\n")
+
+    #počet slov začínajících velkým písmenem
+    capital_letters = 0
+    for word in words:
+        if word.istitle():
+            capital_letters += 1
+    print("Number of words in the selected text starting with a capital letter: " + str(capital_letters))
+
+    #počet slov psaných velkými písmeny
+    title_letters = 0
+    for word in words:
+        if word.isupper():
+            title_letters += 1
+    print("Number of words in the selected text written with all capital letters: " + str(title_letters))
+
+    #počet slov psaných malými písmeny
+    lower_letters = 0
+    for word in words:
+        if word.islower():
+            lower_letters += 1
+    print("Number of words in the selected text written with lower letters: " + str(lower_letters))
+
+    #počet čísel (ne cifer)
+    numeric_letters = 0
+    for word in words:
+        if word.isnumeric():
+            numeric_letters += 1
+    print("Number of words in the selected text which are numbers: " + str(numeric_letters))
+
+    #sumu všech čísel (ne cifer) v textu
+    number = 0
+    for word in words:
+        if word.isnumeric():
+            number += int(word)
+    print("-" * 45, "Total sum of numbers in selected text: " + str(number),"-" * 45, sep="\n")
+
+    #sloupcový graf, který bude reprezentovat četnost různých délek slov v textu
+    leftAlign = "LEN|"
+    centerAlign = "OCCURENCES"
+    rightAlign = "|NR."
+
+    print(f"{leftAlign :<16}{centerAlign :^11}{rightAlign :>15}")
+    len_words_sorted = []
+    len_words = []
+    for word in words:
+        len_words_sorted.append(int(len(word)))
+        len_words.append(int(len(word)))
+    len_words_sorted = list(set(len_words_sorted))
+    len_words_sorted.sort()
+
+    index = 0
+    for num in len_words_sorted:
+        if num == len_words_sorted[index]:
+            print(str(len_words_sorted[index]) 
+                  + "|".ljust(15," ") + str("*" * int(len_words.count(len_words_sorted[index]))) 
+                  + "|".rjust(23-int((len_words.count(len_words_sorted[index])))," ") 
+                  + str(len_words.count(len_words_sorted[index]))
+                  )
+            index += 1
+    
+
+#zbytek IF funkce
+else:    
+    print("You're not authorized,""terminating program...")
