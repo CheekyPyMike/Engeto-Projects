@@ -5,20 +5,6 @@ email: mykola.tikhonov@seznam.cz
 discord: phranschyze
 """
 
-"""
-projekt_1.py: první projekt do Engeto Online Python Akademie
-author: Mykola Tikhonov
-email: mykola.tikhonov@seznam.cz
-discord: phranschyze
-"""
-
-"""
-projekt_1.py: první projekt do Engeto Online Python Akademie
-author: Mykola Tikhonov
-email: mykola.tikhonov@seznam.cz
-discord: phranschyze
-"""
-
 from task_template import TEXTS
 
 username = input("Please enter your username: ")
