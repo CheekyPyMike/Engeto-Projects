@@ -23,14 +23,15 @@ Knihovny je možné nainstalovat pomocí `pip`. Spusťte následující příkaz
 
 ```bash
 pip install argparse beautifulsoup4 pandas requests atd...
+
 Ukázka projektu:
   argument1 - https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103
   argument2 - vysledky_prostejov.csv
+
 Spuštění programu:
 python scrape_volby.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103" "vysledky_prostejov.csv"
 
 Částečný výstup:
-
 code	location	registered	envelopes	valid	Občanská demokratická strana	Řád národa - Vlastenecká unie	CESTA ODPOVĚDNÉ SPOLEČNOSTI	Česká str.sociálně demokrat.	Radostné Česko
 506761	Alojzov	205	145	144	29	0	0	9	0
 589268	Bedihošť	834	527	524	51	0	0	28	1
