@@ -5,7 +5,7 @@ Tento projekt je součástí Engeto Online Python Akademie. Skript `projekt_3.py
 Autor
 Mykola Tichonov
 Email: mykola.tikhonov@seznam.cz
-Discord: phranschyze
+Discord: cheekymike
 
 Popis funkcionality
 Skript načte HTML obsah ze zadané URL adresy, zpracuje tabulky dat a dynamicky získává další informace z propojených stránek. Výsledná data se ukládají do CSV souboru.
