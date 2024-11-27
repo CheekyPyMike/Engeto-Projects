@@ -2,7 +2,7 @@
 projekt_3.py: Třetí projekt do Engeto Online Python Akademie
 author: Mykola Tichonov
 email: mykola.tikhonov@seznam.cz
-discord: phranschyze
+discord: cheekymike
 """
 
 import argparse
